@@ -32,7 +32,29 @@ Discounted Cash Flow (DCF) : It is an estimation of the value of an investment b
 
 It's worth noting that the best method will vary depending on the type of business and the data available, and it's important to validate the model using a holdout sample or other methods to ensure its accuracy.
 
-#### In this hackathon our focus is on Predictive modeling.
+#### In this hackathon our focus was on Predictive modeling.
+
+**Approach:**
+
+- **Data Exploartion :**
+  - Data did not require much of the cleaning/outlier treatmnet.
+  - Most of the variables were categorical in nature .
+  - The target variable was positively skewed . Tried modelling with log transformation and also with box cox specific transformation. But did not help
+
+
+- **Data Preprocessing and Feature Engineering:**
+  - Tried Adding more features by combining categorical features . But it did not help .
+  - A new feature using claim amount/vintage was derived and used .
+  -  Claim amount was binned using the percentile values and this binned varaible was used into modelling . 
+  - Finally I did k-mode clustering on categorical variables and this was used as a variable in model .
+  - Tried Various Encoding like Label Encoding , One hot encoding . Finally One hot encoding performed better with GBM and Ridge model while for LGBM
+     Variables were passed directly ( LGBM does internal encoding for these variables)
+
+- **Modelling :**
+  - Tried various models like Xgboost , Catboost,LGBM,Random forest , Linear model with regularization  (Lasso , Ridge) and Deep Learning Models. Finally selected Ridge,LGBM and GBM models
+     For Submission. 
+- **Final Model:**
+  - Blended LGBM , Ridge , and GBM with weight of 0.6,0.2 and 0.2 .
 
 
  
