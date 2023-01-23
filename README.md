@@ -52,7 +52,7 @@ It's worth noting that the best method will vary depending on the type of busine
   - Also tried taking average , std  of claim amount across various categorical variable but did not help.
 
 - **Modelling :**
-  - Tried various models like Xgboost , Catboost,LGBM,Random forest , Linear model with regularization  (Lasso , Ridge) and Deep Learning Models. Finally selected Ridge,LGBM and GBM models
+  - Tried various models like Xgboost , Catboost,LGBM,Random forest , Linear model with regularization  (Lasso , Ridge) and Deep Learning Models. Finally selected Ridge,LGBM and GBM models with 10 fold cross validation.
      For Submission. 
 - **Final Model:**
   - Blended LGBM , Ridge , and GBM with weight of 0.6,0.2 and 0.2 .
