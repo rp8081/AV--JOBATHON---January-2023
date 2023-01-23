@@ -49,6 +49,7 @@ It's worth noting that the best method will vary depending on the type of busine
   - Finally I did k-mode clustering on categorical variables and this was used as a variable in model .
   - Tried Various Encoding like Label Encoding , One hot encoding . Finally One hot encoding performed better with GBM and Ridge model while for LGBM
      Variables were passed directly ( LGBM does internal encoding for these variables)
+  - Also tried taking average , std  of claim amount across various categorical variable but did not help.
 
 - **Modelling :**
   - Tried various models like Xgboost , Catboost,LGBM,Random forest , Linear model with regularization  (Lasso , Ridge) and Deep Learning Models. Finally selected Ridge,LGBM and GBM models
